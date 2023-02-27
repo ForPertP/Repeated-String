@@ -24,3 +24,24 @@ long repeatedString(string s, long n)
     
     return size + rest;
 }
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    string s;
+    getline(cin, s);
+
+    string n_temp;
+    getline(cin, n_temp);
+
+    long n = stol(ltrim(rtrim(n_temp)));
+
+    long result = repeatedString(s, n);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
